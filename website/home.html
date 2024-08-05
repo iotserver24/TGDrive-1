@@ -18,6 +18,43 @@
 
 <body>
     <div class="container">
+        <!-- Sidebar Start -->
+        <div class="sidebar">
+            <div class="sidebar-header">
+                <img src="https://ssl.gstatic.com/images/branding/product/1x/drive_2020q4_48dp.png" />
+                <span>TG Drive</span>
+            </div>
+
+            <button id="new-button" class="new-button">
+                <img src="static/assets/plus-icon.svg" />New
+            </button>
+
+            <div id="new-upload" class="new-upload">
+                <input id="new-upload-focus" type="text"
+                    style="height: 0px; width: 0px; border: none; position: absolute" readonly />
+                <div id="new-folder-btn">
+                    <img src="static/assets/folder-icon.svg" />
+                    New Folder
+                </div>
+                <hr />
+                <div id="file-upload-btn">
+                    <img src="static/assets/upload-icon.svg" />
+                    File Upload
+                </div>
+                <input type="file" id="fileInput" style="height: 0px; width: 0px; border: none; position: absolute" />
+                <hr />
+                <div id="url-upload-btn">
+                    <img src="static/assets/link-icon.svg" />
+                    URL Upload
+                </div>
+            </div>
+
+            <div class="sidebar-menu">
+                <a class="selected-item" href="/?path=/"><img src="static/assets/home-icon.svg" />Home</a>
+            </div>
+        </div>
+        <!-- Sidebar End -->
+
         <div id="bg-blur" class="bg-blur"></div>
 
         <!-- Create New Folder Start -->
@@ -86,36 +123,6 @@
 
         <!-- Main Content Start -->
         <div class="main-content">
-            <div class="header">
-                <div class="search-bar">
-                    <img src="static/assets/search-icon.svg" />
-                    <form id="search-form">
-                        <input id="file-search" type="text" placeholder="Search in Drive" autocomplete="off" />
-                    </form>
-                    <button id="new-button" class="new-button">
-                        <img src="static/assets/plus-icon.svg" />New
-                    </button>
-                    <div id="new-upload" class="new-upload">
-                        <input id="new-upload-focus" type="text" style="height: 0px; width: 0px; border: none; position: absolute" readonly />
-                        <div id="new-folder-btn">
-                            <img src="static/assets/folder-icon.svg" />
-                            New Folder
-                        </div>
-                        <hr />
-                        <div id="file-upload-btn">
-                            <img src="static/assets/upload-icon.svg" />
-                            File Upload
-                        </div>
-                        <input type="file" id="fileInput" style="height: 0px; width: 0px; border: none; position: absolute" />
-                        <hr />
-                        <div id="url-upload-btn">
-                            <img src="static/assets/link-icon.svg" />
-                            URL Upload
-                        </div>
-                    </div>
-                </div>
-            </div>
-
             <div class="directory">
                 <table>
                     <thead>
@@ -129,10 +136,10 @@
                 </table>
             </div>
         </div>
-        <!-- Main Content End -->
     </div>
     <script src="static/js/extra.js"></script>
     <script src="static/js/apiHandler.js"></script>
+    <script src="static/js/sidebar.js"></script>
     <script src="static/js/fileClickHandler.js"></script>
     <script src="static/js/main.js"></script>
 </body>
