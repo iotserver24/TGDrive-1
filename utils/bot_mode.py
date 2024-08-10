@@ -7,7 +7,7 @@ from pathlib import Path
 
 logger = Logger(__name__)
 
-START_CMD = """🚀 **Welcome To TG Drive's Bot Mode(built by @R3AP3Redit)**
+START_CMD = """🚀 **Welcome To TG Drive's Bot Mode**
 
 You can use this bot to upload files to your TG Drive website directly instead of doing it from website.
 
@@ -15,7 +15,7 @@ You can use this bot to upload files to your TG Drive website directly instead o
 /set_folder - Set folder for file uploads
 /current_folder - Check current folder
 
-📤 **How To Upload Files:** Send a file to this bot and it will be uploaded to your TG Drive website. You can also set a folder for file uploads using /set_folder command.(imp : send it as file to work)
+📤 **How To Upload Files:** Send a file to this bot and it will be uploaded to your TG Drive website. You can also set a folder for file uploads using /set_folder command.
 
 
 """
@@ -174,7 +174,7 @@ async def file_handler(client: Client, message: Message):
     )
 
     await message.reply_text(
-        f"""✅ File Uploaded Successfully To Your Website
+        f"""✅ File Uploaded Successfully To Your TG Drive Website
                              
 **File Name:** {file.file_name}
 **Folder:** {BOT_MODE.current_folder_name}
@@ -191,7 +191,7 @@ async def start_bot_mode(d, b):
     await main_bot.start()
 
     await main_bot.send_message(
-        config.STORAGE_CHANNEL, "Main Bot Started -> Bot Enabled"
+        config.STORAGE_CHANNEL, "Main Bot Started -> TG Drive's Bot Mode Enabled"
     )
     logger.info("Main Bot Started")
     logger.info("TG Drive's Bot Mode Enabled")
