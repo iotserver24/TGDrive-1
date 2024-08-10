@@ -51,6 +51,7 @@
 
             <div class="sidebar-menu">
                 <a class="selected-item" href="/?path=/"><img src="static/assets/home-icon.svg" />Home</a>
+                <a class="unselected-item" href="/?path=/trash"><img src="static/assets/trash-icon.svg" />Trash</a>
             </div>
         </div>
         <!-- Sidebar End -->
@@ -123,6 +124,16 @@
 
         <!-- Main Content Start -->
         <div class="main-content">
+            <div class="header">
+                <div class="search-bar">
+                    <img src="static/assets/search-icon.svg" />
+                    <form id="search-form">
+                        <input id="file-search" type="text" placeholder="Search in Drive" autocomplete="off" />
+                    </form>
+
+                </div>
+            </div>
+
             <div class="directory">
                 <table>
                     <thead>
