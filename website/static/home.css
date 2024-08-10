@@ -14,14 +14,120 @@
     height: 100vh;
     display: grid;
     background: #f1f1f1;
-    grid-template-columns: 1fr;
+    grid-template-columns: auto 1fr;
 }
 
 .rotate-90 {
     transform: rotate(90deg);
 }
 
-/* Sidebar Style Removed */
+/* Sidebar Style Start */
+
+.sidebar {
+    width: 250px;
+    height: 100%;
+    background-color: #f8fafd;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: start;
+}
+
+.sidebar-header {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+}
+
+.sidebar-header img {
+    width: 40px;
+    height: 40px;
+    margin-right: 10px;
+}
+
+.sidebar-header span {
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #444746;
+}
+
+.sidebar .new-button {
+    padding: 15px 20px;
+    background-color: #fff;
+    border: 1px solid #e0e0e0;
+    border-radius: 20px;
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
+    font-size: 0.9rem;
+    color: #282c35;
+    font-weight: 500;
+}
+
+.sidebar .new-button:hover {
+    background-color: #edf1fa;
+    border: 1px solid #c9d0e6;
+    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.sidebar .new-button img {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+.new-upload {
+    position: absolute;
+    background-color: #ffffff;
+    padding: 5px 0px;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
+    border-radius: 5px;
+    width: 250px;
+    top: 40px;
+    z-index: -1;
+    opacity: 0;
+    transition: all 0.2s;
+}
+
+.new-upload div {
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+}
+
+.new-upload div:hover {
+    background-color: #f1f1f1;
+}
+
+.new-upload div img {
+    margin-right: 10px;
+    height: 20px;
+    width: 20px;
+}
+
+.new-upload hr {
+    border: 1px solid #e0e0e0;
+    margin: 5px 0px;
+}
+
+.bg-blur {
+    position: fixed;
+    background-color: #000000;
+    height: 100dvh;
+    width: 100dvw;
+    transition: opacity 0.3s ease;
+    z-index: -1;
+    opacity: 0;
+}
 
 /* More Options Start */
 
@@ -66,6 +172,7 @@
 
 /* More Options End */
 
+
 /* Create New Folder Start */
 .create-new-folder {
     position: fixed;
@@ -83,8 +190,7 @@
     opacity: 0;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease;
-    width: 90%;
-    max-width: 400px;
+    width: 400px;
 }
 
 .create-new-folder span {
@@ -140,7 +246,7 @@
 
 /* Remote URL Upload Start */
 
-#single-threaded-div {
+#single-threaded-div{
     display: flex;
     flex-direction: row;
     justify-content: start;
@@ -149,18 +255,17 @@
     margin: 10px 0px;
 }
 
-#single-threaded-div input {
+#single-threaded-div input{
     width: auto;
     margin: 0px;
     margin-left: 10px;
 }
 
-#single-threaded-div img {
+#single-threaded-div img{
     height: 16px;
     width: 16px;
 }
-
-#single-threaded-div a {
+#single-threaded-div a{
     height: 16px;
     width: 16px;
 }
@@ -184,8 +289,7 @@
     z-index: -1;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: opacity 0.3s ease;
-    width: 90%;
-    max-width: 500px;
+    width: 500px;
     opacity: 0;
 }
 
@@ -252,6 +356,45 @@
 
 /* File Uploader End */
 
+.sidebar-menu {
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: start;
+    align-items: center;
+}
+
+.sidebar-menu a {
+    width: 100%;
+    padding: 10px 20px;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    color: #444746;
+    font-size: 0.9rem;
+    font-weight: 400;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    border-radius: 20px;
+}
+
+.sidebar-menu .selected-item {
+    background-color: #c2e7ff;
+}
+
+.sidebar-menu .unselected-item:hover {
+    background-color: #cfcfcf;
+}
+
+.sidebar-menu a img {
+    width: 20px;
+    height: 20px;
+    margin-right: 10px;
+}
+
+/* Sidebar Style End */
+
 /* Main Content Style Start */
 
 .main-content {
@@ -315,7 +458,6 @@
     height: 100%;
     border-radius: 20px;
     margin-top: 20px;
-    overflow: auto;
 }
 
 .directory table {
@@ -383,42 +525,3 @@
     background-color: #b9b9b9;
     box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
 }
-
-/* Main Content Style End */
-
-/* Hide Sidebar CSS */
-.sidebar,
-.sidebar-header,
-.sidebar .new-button,
-.sidebar-menu {
-    display: none;
-}
-
-/* Ensure New Button is Visible Next to Search Bar */
-.header .new-button {
-    padding: 10px 20px;
-    background-color: #007bff;
-    border: none;
-    border-radius: 20px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    cursor: pointer;
-    transition: all 0.3s ease;
-    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1);
-    font-size: 0.9rem;
-    color: #fff;
-    font-weight: 500;
-}
-
-.header .new-button img {
-    width: 20px;
-    height: 20px;
-    margin-right: 10px;
-}
-
-.header .new-button:hover {
-    background-color: #0056b3;
-    box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.3);
-}
-Is this correct?
