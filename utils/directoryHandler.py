@@ -282,7 +282,7 @@ async def backup_drive_data():
                 config.DATABASE_BACKUP_MSG_ID,
                 media=InputMediaDocument(
                     drive_cache_path,
-                    caption=f"🔐 **TG Drive Data Backup File**\n\nDo not edit or delete this message. This is a backup file for the tg drive data.\n\n{time_text}",
+                    caption=f"🔐 ** Drive Data Backup File**\n\nDo not edit or delete this message. This is a backup file for the tg drive data.\n\n{time_text}",
                 ),
                 file_name="drive.data",
             )
